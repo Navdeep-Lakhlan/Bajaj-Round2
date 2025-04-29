@@ -1,0 +1,164 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-rgb: 240, 240, 240;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: rgb(var(--background-rgb));
+}
+
+/* Focus styles for accessibility */
+*:focus-visible {
+  outline: 2px solid #4f46e5;
+  outline-offset: 2px;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Animations for blob effect */
+@keyframes blob {
+  0% {
+    transform: translate(0px, 0px) scale(1);
+  }
+  33% {
+    transform: translate(30px, -50px) scale(1.1);
+  }
+  66% {
+    transform: translate(-20px, 20px) scale(0.9);
+  }
+  100% {
+    transform: translate(0px, 0px) scale(1);
+  }
+}
+
+.animate-blob {
+  animation: blob 7s infinite;
+}
+
+.animation-delay-2000 {
+  animation-delay: 2s;
+}
+
+.animation-delay-4000 {
+  animation-delay: 4s;
+}
+
+.animation-delay-6000 {
+  animation-delay: 6s;
+}
+
+/* Loading progress animation */
+@keyframes loadingProgress {
+  0% {
+    width: 0%;
+  }
+  50% {
+    width: 70%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+.animate-loadingProgress {
+  animation: loadingProgress 2s ease-in-out infinite;
+}
+
+/* Success progress animation */
+@keyframes successProgress {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+.animate-success-progress {
+  animation: successProgress 2.5s ease-out forwards;
+}
+
+/* Confetti animations */
+@keyframes confetti-1 {
+  0% { transform: translateY(-10px) rotate(0deg); opacity: 1; }
+  100% { transform: translateY(400px) rotate(720deg); opacity: 0; }
+}
+
+@keyframes confetti-2 {
+  0% { transform: translateY(-10px) rotate(0deg); opacity: 1; }
+  100% { transform: translateY(400px) rotate(-720deg); opacity: 0; }
+}
+
+@keyframes confetti-3 {
+  0% { transform: translateY(-10px) rotate(0deg); opacity: 1; }
+  100% { transform: translateY(400px) rotate(540deg); opacity: 0; }
+}
+
+@keyframes confetti-4 {
+  0% { transform: translateY(-10px) rotate(0deg); opacity: 1; }
+  100% { transform: translateY(400px) rotate(-540deg); opacity: 0; }
+}
+
+@keyframes confetti-5 {
+  0% { transform: translateY(-10px) rotate(0deg); opacity: 1; }
+  100% { transform: translateY(400px) rotate(360deg); opacity: 0; }
+}
+
+@keyframes confetti-6 {
+  0% { transform: translateY(-10px) rotate(0deg); opacity: 1; }
+  100% { transform: translateY(400px) rotate(-360deg); opacity: 0; }
+}
+
+@keyframes confetti-7 {
+  0% { transform: translateY(-10px) rotate(0deg); opacity: 1; }
+  100% { transform: translateY(400px) rotate(180deg); opacity: 0; }
+}
+
+.animate-confetti-1 {
+  animation: confetti-1 1.5s ease-out forwards;
+}
+
+.animate-confetti-2 {
+  animation: confetti-2 1.8s ease-out forwards;
+}
+
+.animate-confetti-3 {
+  animation: confetti-3 2.1s ease-out forwards;
+}
+
+.animate-confetti-4 {
+  animation: confetti-4 2.4s ease-out forwards;
+}
+
+.animate-confetti-5 {
+  animation: confetti-5 1.7s ease-out forwards;
+}
+
+.animate-confetti-6 {
+  animation: confetti-6 2.3s ease-out forwards;
+}
+
+.animate-confetti-7 {
+  animation: confetti-7 2s ease-out forwards;
+}
